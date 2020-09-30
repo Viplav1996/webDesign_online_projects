@@ -1,0 +1,91 @@
+Applied Visual Design: Lock an Element to its Parent with Absolute PositioningPassed
+The next option for the CSS position property is absolute, which locks the element in place relative to its parent container.
+Unlike the relative position, this removes the element from the normal flow of the document, so surrounding items ignore it.
+The CSS offset properties (top or bottom and left or right) are used to adjust the position.
+
+One nuance with absolute positioning is that it will be locked relative to its closest positioned ancestor.
+If you forget to add a position rule to the parent item, (this is typically done using position: relative;),
+the browser will keep looking up the chain and ultimately default to the body tag.
+
+
+
+
+
+
+
+
+<style>
+  #searchbar {
+    position: absolute;
+    right:50px;
+    top:50px;
+  }
+  section {
+    position: relative;
+  }
+</style>
+<body>
+  <h1>Welcome!</h1>
+  <section>
+    <form id="searchbar">
+      <label for="search">Search:</label>
+      <input type="search" id="search" name="search">
+      <input type="submit" name="submit" value="Go!">
+    </form>
+  </section>
+</body>
+
+
+
+
+
+
+
+The next layout scheme that CSS offers is the fixed position, which is a type of absolute positioning that locks an element relative to the browser window. 
+Similar to absolute positioning, it's used with the CSS offset properties and also removes the element from the normal flow of the document.
+Other items no longer "realize" where it is positioned, which may require some layout adjustments elsewhere.
+
+One key difference between the fixed and absolute positions is that an element with a fixed position won't move when the user scrolls.
+
+The navigation bar in the code is labeled with an id of navbar. Change its position to fixed,
+and offset it 0 pixels from the top and 0 pixels from the left. After you have added the code, scroll the preview window to see how the navigation stays in place.
+
+
+
+<style>
+  body {
+    min-height: 150vh;
+  }
+  #navbar {
+    position:fixed;
+    top:0px;
+    left:0px;
+    width: 100%;
+    background-color: #767676;
+  }
+  nav ul {
+    margin: 0px;
+    padding: 5px 0px 5px 30px;
+  }
+  nav li {
+    display: inline;
+    margin-right: 20px;
+  }
+  a {
+    text-decoration: none;
+  }
+</style>
+<body>
+  <header>
+    <h1>Welcome!</h1>
+    <nav id="navbar">
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <p>I shift up when the #navbar is fixed to the browser window.</p>
+</body>
+
+
