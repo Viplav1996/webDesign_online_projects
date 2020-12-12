@@ -1,1 +1,36 @@
+################################################################
+
+
+
+function makeTransaction(priceOfSale) {
+    if (priceOfSale <= bankBalance) {
+        bankBalance-= priceOfSale;
+        console.log('Purchase Successful  :)');
+        console.log('Remainig Balance '+ bankBalance);
+    }
+    else {
+        console.log('Insufficient Funds :(');
+    }
+}
+
+
+makeTransaction(55);
+makeTransaction(3.43);
+makeTransaction(17);
+makeTransaction(30);
+makeTransaction(10);
+
+################################################################
+
+
+var makeTransaction = function(priceOfSale) {
+    if (priceOfSale <= bankBalance) {
+        bankBalance-= priceOfSale;
+        console.log('Purchase Successful  :)');
+        console.log('Remainig Balance '+ bankBalance);
+    }
+    else {
+        console.log('Insufficient Funds :(');
+    }
+}
 
