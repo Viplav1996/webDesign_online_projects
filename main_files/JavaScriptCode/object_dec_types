@@ -1,0 +1,58 @@
+
+var stu0 = { 
+    firstName: "John",
+    lastName: "Parker",
+    age : 7,
+    greeting: function(){
+        return "Hi, I'm "+ this.firstName + " and I'm " + this.age + " years old.";
+    }
+} ;
+
+
+var stu1 = new Object();
+
+stu1.firstName = "A";
+stu1.lastName = "B";
+stu1.age = 3;
+
+var stu2 = {};
+
+stu2.firstName = "C";
+stu2.lastName = "D";
+stu2.age = 4;
+
+var students = [];
+
+students.push(stu0);
+students.push(stu1);
+students.push(stu2);
+
+console.log(stu0.greeting());
+
+for (var x =0; x < students.length; x++) {
+    console.log(students[x]);
+}
+
+function students(first, last, age) {
+  this.firstName = first;
+  this.lastName  = last;
+  this.age = age;
+  this.greeting = function () {
+        return "Hi, I'm "+ this.firstName + " and I'm " + this.age + " years old.";
+}
+
+
+
+
+arr.push(Student("Carle", "Dawn", 10));
+arr.push(Student("Grelr", "Huyf", 6));
+arr.push(Student("Jact", "Olie", 13));
+// console.log(s1);
+// console.log(s1.greeting());
+
+for ( var ind=0; ind < arr.length ; ind++){
+    var stu = arr[ind];
+    console.log(stu.greeting());
+}
+
+
