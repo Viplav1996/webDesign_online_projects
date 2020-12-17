@@ -1,0 +1,9 @@
+mkdir - making directory
+cd - changing directory
+rd/rmdir - removing directory
+echo - making a file in a directory
+type - to look into the contents of the directory
+exit - to exit the whole cmd 
+cd / - to go to default home or root address
+echo. - to create an empty file
+> - redirectory sign to assign values to a particular file
