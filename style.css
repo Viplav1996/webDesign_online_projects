@@ -1,0 +1,61 @@
+/* .container {
+    background-color: blueviolet;
+    height: 5rem;
+
+}
+.row {
+    background-color: #FF9232;
+    height: 4.7rem;
+}
+[class*="col-"] {
+    background-color: #00C3AA;
+    height: 4.2rem;
+    border: 2px solid rgba(0,0,0,0.3);
+} */
+
+body.signin-body {
+    background-color: #e6f2ff;
+}
+
+.container.signin-container {
+    margin-top: 8%;
+}
+
+.card.signin-card {
+    padding: 10px 10px 10px 10px;
+    background-color: #f4f4f4;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .5); 
+    -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+}
+
+.img.signin-img {
+    padding: 0 2rem 2rem;
+    margin: auto;
+    display: block;
+    width: 70%;
+}
+form.signin-form {
+    padding-top: 10px;
+    max-width: 350px;
+    margin: auto;
+}
+button.signin-btn {
+    color : white;
+    background-color: #d64829;
+    width: 100%;
+
+}
+input.form-control{
+    margin: 20px 0 20px 0;
+    padding: 10px 5px 10px 5px;
+
+}
+label.form-check-label {
+    margin: 10px 0 10px 0;
+}
+a.create-new-account {
+    text-align: center;
+    font-size: 1.2rem;
+    display: block;
+    margin-top: 20px;
+}
