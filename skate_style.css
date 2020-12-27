@@ -1,0 +1,33 @@
+.jumbotron {
+    height: 150px;
+    font-size: 60px;
+    text-align: center;
+    padding-top: 40px;
+    margin-bottom: 40px;
+    /* background-color: rgb(24, 210, 216); */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.min-font {
+    font-size: 20px;
+    margin-top: -20px;
+    
+}
+
+.sectionLight {
+    background-color: #eceeef;
+    padding: 2em;
+}
+
+
+@media screen and (max-width: 600px) {
+    div.jumbotron {
+        font-size: 45px;
+        height: 100px;
+        padding-top: 30px;
+    }
+
+    p.min-font {
+        font-size: 15px;
+    }
+}
