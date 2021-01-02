@@ -1,0 +1,109 @@
+.jumbotron {
+    height: 150px;
+    font-size: 60px;
+    text-align: center;
+    padding-top: 40px;
+    margin-bottom: 40px;
+    /* background-color: rgb(24, 210, 216); */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.min-font {
+    font-size: 20px;
+    margin-top: -20px;
+    
+}
+
+.sectionLight {
+    background-color: #eceeef;
+    padding: 2em;
+}
+
+.sectionDark {
+    background-color: lightgray;
+    padding: 2rem;
+}
+.coolStuffWrapper {
+    margin-top: 20px;
+
+}
+.logo_img img {
+    width: 75px;
+    height: 50px;
+}
+.modal-dialog {
+    margin: auto;
+}
+
+img.img-fluid {
+    padding-top: 30px;
+    margin: auto;
+}
+
+.offerImg {
+    margin:auto;
+}
+
+.coolStuffBtn {
+    background-color: red;
+    color: #ffffff;
+    display: block;
+    margin: auto;
+}
+
+
+.modalFormWrapper{
+    padding: 2rem;
+}
+h5.modal-title {
+    margin: auto;
+}
+
+.imgCenter {
+    display: block;
+    margin: auto;
+}
+
+.btnCenter {
+    display: block;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    width: 50%;
+}
+
+.size {
+    width: 50%;
+}
+
+.bg-inverse {
+    background-color: rgb(25, 30, 31);
+}
+.fa {
+    margin: 10px;
+
+}
+.fa-facebook-square {
+    color: #3b5998;
+}
+.fa-instagram {
+    color: #eceeef;
+}
+.fa-google-plus-official{
+    color: #c32f10;
+}
+
+.socialWrapper {
+    margin: auto;
+}
+@media screen and (max-width: 600px) {
+    div.jumbotron {
+        font-size: 45px;
+        height: 100px;
+        padding-top: 30px;
+    }
+
+    p.min-font {
+        font-size: 15px;
+    }
+}
