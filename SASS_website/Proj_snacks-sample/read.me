@@ -1,0 +1,33 @@
+This project is based on building website using SASS
+
+Reason for using Sass is: When we make request from server, sass only make one http request(as all the files are imported in each other)
+whereas CSS will make the same number of request as many css files will be available.
+
+NAVBAR - is kind of module which can be placed any where in the page and not a layout
+
+LAYOUT - Elements of layout are declared using id's
+
+command to look for changes in the SASS file while compiling is
+
+sass --watch SASS:CSS (whole directory is being monitered or the file which is not Partial is being checked (_filename.sass == "Partial file" (wont be compiled)))
+
+
+Declaring elements directly is easy in SASS and there is no need to call for an indiviual element eg
+
+#header
+  color: 
+  size:
+  font-family:
+  h1
+    font:
+    color:
+    ul
+      size:
+      color:
+      background-color:
+      li
+        font-family:
+        a
+          text-decoration:
+          &:hover
+            color: green
