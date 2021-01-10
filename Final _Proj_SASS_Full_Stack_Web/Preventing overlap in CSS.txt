@@ -1,0 +1,30 @@
+When using CSS, how can I prevent my DIVs from overlapping when I shrink my browser?
+What you are referring to is responsiveness: the ability of a website to self adjust to account for various screen sizes.
+Lots of people are giving you great suggestion for various frameworks and solutions, but I'll instead go into a little bit of "responsive website theory"
+and walk you through the problem step by step.
+
+It sounds like you are probably setting the widths of your DIV elements in pixels. 
+This means that as long as the screen size is greater than the sum of the two DIV elements' widths your site looks fine.
+But once the screen size is reduced below that sum, the DIVs are forced on top of one another. 
+So the first solution would be to change the widths of the elements to percentages. You may also be setting the element's position using the absolute option.
+While this is a great tool in some cases, typically you'll want positioning to be handled by the flow of the HTML, so you can handle that by using relative positioning 
+and the display: inline-block attribute, which allows your DIV elements to exist on the same "line" if they take up less than the full width of the container
+ (whether that is the browser window or a containing element, such as another DIV).
+
+Using percentages for your widths (we'll just assume two DIVs, each at width: 50%, for simplicity), you can allow your DIVs to grow and shrink to fit the full width of the frame.
+Which solves the problem of DIV overlap. The DIVs will always each be exactly 50% of the screen. But this creates a new set of problems. 
+The content inside of the DIVs is remaining the same size as the DIVs grow larger and smaller.
+
+So next we adjust to make sure that they don't stretch so wide that they look awkward. The easiest solution is to simply give those DIVs a max-width attribute.
+Let's call it 600px. Now, once the screen goes above 1200px, the DIVs stop stretching. They lock in at that 600px and create white space beyond that. You could also do this by placing the two DIVs inside of a containing DIV which is set to width: 100% and given a max-width of 1200px.
+
+And lastly, we have to make sure that as the screen gets smaller we don't end up with elements that are getting scrunched up or overflowing the DIV element itself. You can do this by adding some additional CSS in a media query. For example, @media only screen and (max-width: 500px) { } would apply the styles within the brackets only to sites viewed on a screen with a width of less than 500px. And there are a few different ways to go from here, depending on the content. You may want to simply shrink the font size to make it fit better. You could also set the width to 100% so that the elements stack on top of one another, rather than resting side to side.
+
+Responsiveness is simply a matter of mastering the tools you have available to you. Play around with things like max-widths and media queries. Learn how they work. Make something without a framework. With just a bit of fiddling, you'll have the tools to do more advanced techniques like setting a full-width background image that stretches to properly fill it's DIV, or creating elements that are only displayed (or replaced by alternate elements) on certain screen sizes, or creating rectangular elements inside of circular elements that don't overflow the round edges of their parents. Then, when you move on to something like Bootstrap you'll have a better understanding of what is happening if (and when) things don't go quite the way that you want them to and you'll also be able to add some more design elements to your site beyond what your chosen framework can handle by default.
+
+And remember, View Source (or Inspect Element) is your friend. Find a site where it works, look at the code, and figure out why. My first five years as a designer, back in the wild, wild west of the 90s, I did nothing but View Source to teach myself to code. It's not stealing; it's learning.
+
+[for reference, here is what the final hypothetical css would end up looking like, though obviously you'd probably want to give them a class, place them in a container, etc...]
+
+div {display: inline-block; width: 50%; max-width: 600px;}
+@media only screen and (max-width: 500px) { div {width: 100%;}}
